@@ -3,14 +3,14 @@ import cv2
 face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
 im = cv2.imread("face.jpeg", cv2.IMREAD_COLOR)
-print(im.shape)
+print("Shape", im.shape)
 # im = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
 # cv2.imshow("Image",im)
 # cv2.waitKey()
 
 
 faces = face_cascade.detectMultiScale(im,1.3,5)
-print(faces)
+print("Face Coordinates (x,y,w,h)" , faces)
 
 while True:
 

@@ -11,7 +11,7 @@ while True:
         continue
 
     faces = face_cascade.detectMultiScale(frame,1.3,5)
-    print(faces)
+    print("Face Coordinates (x,y,w,h)" , faces)
     for face in faces:
         x,y,w,h = face
 
